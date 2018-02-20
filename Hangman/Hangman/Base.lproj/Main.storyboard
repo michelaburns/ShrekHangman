@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QuD-H8-QEA">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SHREK___.TTF">
+            <string>Shrek</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Starting Screen View Controller-->
+        <scene sceneID="OnZ-vx-gMg">
+            <objects>
+                <viewController id="QuD-H8-QEA" customClass="StartingScreenViewController" customModule="Hangman" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Q1D-tA-fvO"/>
+                        <viewControllerLayoutGuide type="bottom" id="YoJ-B0-BRO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RbO-g4-K1T">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="startingShrek" translatesAutoresizingMaskIntoConstraints="NO" id="6uB-24-Y3H">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="H A N G   M A N" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cU1-eL-I8J">
+                                <rect key="frame" x="12" y="20" width="312" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="dvC-cz-tYk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Shrek" family="Shrek" pointSize="25"/>
+                                <color key="textColor" red="0.81086081266403198" green="0.79409581422805786" blue="0.16318133473396301" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="P.S. Turn on your sound" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0O-FJ-e1r">
+                                <rect key="frame" x="11" y="638" width="265" height="21"/>
+                                <fontDescription key="fontDescription" name="Shrek" family="Shrek" pointSize="17"/>
+                                <color key="textColor" red="0.81086081269999999" green="0.79409581419999997" blue="0.16318133470000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4P-fY-CeA">
+                                <rect key="frame" x="31" y="554" width="144" height="57"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="khp-6j-GvT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Shrek" family="Shrek" pointSize="22"/>
+                                <state key="normal" title="Click Play">
+                                    <color key="titleColor" red="0.81086081269999999" green="0.79409581419999997" blue="0.16318133470000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startButton:" destination="QuD-H8-QEA" eventType="touchUpInside" id="SkM-HP-fJ9"/>
+                                    <segue destination="43Y-YX-b7i" kind="presentation" modalTransitionStyle="partialCurl" id="Qci-1m-Eqv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cU1-eL-I8J" firstAttribute="top" secondItem="Q1D-tA-fvO" secondAttribute="bottom" id="0uq-dg-gXA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="f0O-FJ-e1r" secondAttribute="trailing" constant="83" id="1TV-Nq-s4L"/>
+                            <constraint firstAttribute="bottom" secondItem="O4P-fY-CeA" secondAttribute="bottom" constant="56" id="26n-Wq-LnP"/>
+                            <constraint firstItem="f0O-FJ-e1r" firstAttribute="leading" secondItem="RbO-g4-K1T" secondAttribute="leadingMargin" constant="-5" id="GMM-N0-nHI"/>
+                            <constraint firstItem="6uB-24-Y3H" firstAttribute="leading" secondItem="RbO-g4-K1T" secondAttribute="leading" id="H31-sZ-7Lw"/>
+                            <constraint firstItem="6uB-24-Y3H" firstAttribute="top" secondItem="RbO-g4-K1T" secondAttribute="top" id="PcQ-Lf-TzQ"/>
+                            <constraint firstItem="YoJ-B0-BRO" firstAttribute="top" secondItem="f0O-FJ-e1r" secondAttribute="bottom" constant="8" symbolic="YES" id="Qkp-EJ-1nn"/>
+                            <constraint firstItem="6uB-24-Y3H" firstAttribute="bottom" secondItem="YoJ-B0-BRO" secondAttribute="top" id="To6-ZY-ecx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cU1-eL-I8J" secondAttribute="trailing" constant="35" id="WfW-kf-9OA"/>
+                            <constraint firstAttribute="trailing" secondItem="6uB-24-Y3H" secondAttribute="trailing" id="pH0-xV-xzD"/>
+                            <constraint firstItem="f0O-FJ-e1r" firstAttribute="top" secondItem="O4P-fY-CeA" secondAttribute="bottom" constant="27" id="qAG-1e-Z3y"/>
+                            <constraint firstItem="O4P-fY-CeA" firstAttribute="leading" secondItem="RbO-g4-K1T" secondAttribute="leadingMargin" constant="15" id="x0H-Yk-nn2"/>
+                            <constraint firstItem="cU1-eL-I8J" firstAttribute="leading" secondItem="RbO-g4-K1T" secondAttribute="leadingMargin" constant="-4" id="x9S-4n-NTk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="clickPlayButton" destination="O4P-fY-CeA" id="xGp-0I-nxk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iSn-wg-OlC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-453.60000000000002" y="14.842578710644679"/>
+        </scene>
+        <!--Hangman View Controller-->
+        <scene sceneID="ZVC-eU-6Mu">
+            <objects>
+                <viewController id="43Y-YX-b7i" customClass="HangmanViewController" customModule="Hangman" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TcH-2J-cHJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="0X5-HL-sCv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="z6j-DW-503">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mmW-zi-WlQ" userLabel="wordLabel">
+                                <rect key="frame" x="27" y="346" width="323" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="b0q-iu-CTA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Shrek" family="Shrek" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wj2-mZ-z3c">
+                                <rect key="frame" x="240" y="523" width="97" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="vG0-Sh-e5a"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Shrek" family="Shrek" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Guess" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VgQ-1C-5L2">
+                                <rect key="frame" x="27" y="529.5" width="176" height="18.5"/>
+                                <fontDescription key="fontDescription" name="Shrek" family="Shrek" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="va7-th-IBy">
+                                <rect key="frame" x="26" y="443" width="323" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Pmj-UW-hUg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Shrek" family="Shrek" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shrek1" translatesAutoresizingMaskIntoConstraints="NO" id="c0A-GM-s1X">
+                                <rect key="frame" x="16" y="28" width="343" height="274"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jw3-i5-kQE">
+                                <rect key="frame" x="101" y="604" width="173" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="s2o-xZ-AJc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Shrek" family="Shrek" pointSize="47"/>
+                                <state key="normal" title="Guess">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickToGuess:" destination="43Y-YX-b7i" eventType="touchUpInside" id="tnM-dd-6X0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.81086081269999999" green="0.79409581419999997" blue="0.16318133470000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="jw3-i5-kQE" secondAttribute="bottom" constant="20" symbolic="YES" id="3Yx-1K-osr"/>
+                            <constraint firstItem="VgQ-1C-5L2" firstAttribute="leading" secondItem="mmW-zi-WlQ" secondAttribute="leading" id="6iF-zm-Bck"/>
+                            <constraint firstAttribute="bottom" secondItem="mmW-zi-WlQ" secondAttribute="bottom" constant="300" id="7Dw-yr-mcz"/>
+                            <constraint firstItem="jw3-i5-kQE" firstAttribute="top" secondItem="Wj2-mZ-z3c" secondAttribute="bottom" constant="51" id="Ayh-SF-DLc"/>
+                            <constraint firstItem="mmW-zi-WlQ" firstAttribute="top" secondItem="c0A-GM-s1X" secondAttribute="bottom" constant="44" id="Cb6-CB-zx0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Wj2-mZ-z3c" secondAttribute="trailing" constant="22" id="GIp-pL-xXL"/>
+                            <constraint firstItem="c0A-GM-s1X" firstAttribute="top" secondItem="TcH-2J-cHJ" secondAttribute="bottom" constant="8" symbolic="YES" id="Hja-5n-ahV"/>
+                            <constraint firstItem="jw3-i5-kQE" firstAttribute="centerX" secondItem="z6j-DW-503" secondAttribute="centerX" id="LKs-Yj-LYu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mmW-zi-WlQ" secondAttribute="trailing" constant="9" id="Ohp-3z-bYw"/>
+                            <constraint firstItem="Wj2-mZ-z3c" firstAttribute="top" secondItem="va7-th-IBy" secondAttribute="bottom" constant="59" id="VVI-Sd-tvl"/>
+                            <constraint firstItem="Wj2-mZ-z3c" firstAttribute="leading" secondItem="VgQ-1C-5L2" secondAttribute="trailing" constant="37" id="e22-Af-ryK"/>
+                            <constraint firstItem="mmW-zi-WlQ" firstAttribute="leading" secondItem="z6j-DW-503" secondAttribute="leadingMargin" constant="11" id="iT0-fa-179"/>
+                            <constraint firstItem="va7-th-IBy" firstAttribute="leading" secondItem="z6j-DW-503" secondAttribute="leadingMargin" constant="10" id="ist-Xw-Kcm"/>
+                            <constraint firstItem="va7-th-IBy" firstAttribute="centerX" secondItem="jw3-i5-kQE" secondAttribute="centerX" id="jip-ey-02s"/>
+                            <constraint firstItem="jw3-i5-kQE" firstAttribute="leading" secondItem="z6j-DW-503" secondAttribute="leadingMargin" constant="85" id="k8p-KY-beW"/>
+                            <constraint firstItem="c0A-GM-s1X" firstAttribute="leading" secondItem="z6j-DW-503" secondAttribute="leadingMargin" id="kDf-ke-q10"/>
+                            <constraint firstItem="jw3-i5-kQE" firstAttribute="top" secondItem="VgQ-1C-5L2" secondAttribute="bottom" constant="56" id="sA1-WL-BdF"/>
+                            <constraint firstItem="va7-th-IBy" firstAttribute="centerX" secondItem="c0A-GM-s1X" secondAttribute="centerX" id="ss7-qz-kuA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="currentGuess" destination="Wj2-mZ-z3c" id="7UX-hM-lTk"/>
+                        <outlet property="currentWord" destination="mmW-zi-WlQ" id="9vH-6Q-dOX"/>
+                        <outlet property="imageBox" destination="c0A-GM-s1X" id="dH6-2N-aX0"/>
+                        <outlet property="wrongCharactersLabel" destination="va7-th-IBy" id="FAB-6Y-ACQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JsK-Zs-Gti" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="332" y="14.842578710644679"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="shrek1" width="960" height="540"/>
+        <image name="startingShrek" width="1116" height="1600"/>
+    </resources>
+</document>
